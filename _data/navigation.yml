@@ -26,9 +26,9 @@
   highlight: false
   subitems:
     - name: Calender
-      link: https://bit.ly/2SbrRhe
-      new_window: true
-      external: true
+      link: /calendar
+      new_window: false
+      external: false
     - name: Github
       link: https://github.com/layer5io
       new_window: true
