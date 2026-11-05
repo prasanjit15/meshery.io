@@ -2,31 +2,31 @@
 name: Bug/issue report
 about: Report an issue to help us improve
 title: ''
-labels: 'bug'
+labels: 
+  - 'kind/bug'
+  - 'help wanted'
 assignees: ''
 ---
-**Description**
-A brief description of the issue.
+### Description
+<!-- A brief description of the issue.-->
 
-**Expected Behavior**
-A brief description of what you expected to happen.
+### Expected Behavior
+<!-- A brief description of what you expected to happen.-->
 
-**Screenshots**
-Add screenshots, if applicable, to help explain your problem.
+### Screenshots
+<!--- Add screenshots, if applicable, to help explain your problem.-->
 
-**Enviroment:**
- - OS: [e.g. Ubuntu]
- - Browser: [e.g. Chrome, Safari]
- - Version: [e.g. 22]
- - Device: [e.g. laptop, iPhone 8]
+### Environment:
+ - OS: Mac Linux Windows
+ - Browser: Chrome Safari Firefox
+ - Version: 
+ - Device: Desktop Mobile
 
 ---
-[Optional] **To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## Contributor [Guides](https://docs.meshery.io/project/contributing) and [Handbook](https://meshery.io/community/handbook)
 
-[Optional] **Additional Context**
-Add any other context about the problem here.
+The meshery.io website uses Jekyll and GitHub Pages. Site content is found under the [`master` branch](https://github.com/meshery/meshery.io/tree/master).
+- 📚 See the [Contributing to Meshery.io Website](https://github.com/meshery/meshery.io#contributing-to-the-mesheryio-website) section of the readme.md and other [contributing instructions](https://docs.meshery.io/project/contributing), too.
+- 🎨 Wireframes and [designs for Meshery UI](https://www.figma.com/file/SMP3zxOjZztdOLtgN4dS2W/Meshery-UI) in Figma [(open invite)](https://www.figma.com/team_invite/redeem/GvB8SudhEOoq3JOvoLaoMs)
+- 🙋🏾🙋🏼 Questions: [Discussion Forum](https://discuss.meshery.io) and [Community Slack](https://slack.meshery.io)
+- 📺 [Self-paced Contributor Trainings](https://meshery.io/talks-and-trainings#trainings)

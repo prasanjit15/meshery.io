@@ -1,16 +1,26 @@
 ---
-name: Site Update
-about: Suggest an update to the Meshery.io website
+name: 💡 Feature request
+about: Suggest an enhancement to the Meshery website
 title: ''
-labels: 'kind/enhancement'
+labels: 
+ - 'kind/enhancement'
+ - 'area/website'
+ - 'help wanted'
 assignees: ''
 ---
-**Current State of the Meshery.io site**
-A brief description of what the problem is.
+### Current Behavior
+<!-- A brief description of what the problem is. (e.g. I need to be able to...) -->
 
-**Desired State of the Meshery.io site**
-A brief description of the change you are requesting.
+### Desired Behavior
+<!-- A brief description of the enhancement. -->
+
+### Screenshots / Mockups
+<!-- Add any other context or screenshots about the feature request here. -->
 
 ---
-**Contributor Resources**
-- See the [Contributing to Meshery.io Website](https://github.com/layer5io/meshery.io#contributing-to-the-mesheryio-website) section of the readme.md.
+<img src="https://raw.githubusercontent.com/meshery/meshery.io/master/assets/images/logos/meshery-logo.png" width="16px" align="left" /><h4>Contributor [Guides](https://docs.meshery.io/project/contributing) and Resources</h4>
+
+- 🎨 Wireframes and [designs for Meshery UI](https://www.figma.com/file/SMP3zxOjZztdOLtgN4dS2W/Meshery-UI) in Figma [(open invite)](https://www.figma.com/team_invite/redeem/GvB8SudhEOoq3JOvoLaoMs)
+- 🖥 [Contributing to Meshery Website](https://github.com/meshery/meshery.io#contributing-to-the-mesheryio-website)
+- 🙋🏾🙋🏼 Questions: [Discussion Forum](https://discuss.meshery.io) and [Community Slack](https://slack.meshery.io)
+- 📺 [Self-paced Contributor Trainings](https://meshery.io/talks-and-trainings#trainings)

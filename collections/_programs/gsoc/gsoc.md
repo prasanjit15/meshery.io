@@ -1,0 +1,11 @@
+---
+layout: program-index
+title: "Google Summer of Code"
+subtitle: "Google Summer of Code with Meshery"
+image: /assets/images/programs/gsoc-icon-color.svg
+imageDark: /assets/images/programs/gsoc.svg
+program_slug: /programs/gsoc/
+link: /programs/gsoc
+permalink: /programs/gsoc
+excerpt: "Meshery - Google Summer of Code Program"
+---

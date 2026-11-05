@@ -22,6 +22,7 @@
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
+    border-radius: .25rem;
   }
 
   span .smallcard-a:hover {
@@ -62,16 +63,24 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
+  @media(max-width:992px){
+    .minicard-span {
+      width: 22%;
+    }
+    .card-content{
+      padding: 0 4vw;
+    }
+  }
 </style>
 <div id="gsoc-2020" class="card-content flex">
   <span class="minicard-span">
     <a
       class="smallcard-a waves-effect waves-light btn white-text darken-2 l5-dark-green z-depth-2"
-      href="/programs/meshery/cncf"
+      href="{{ '/programs/meshery/cncf' | relative_url }}"
     >
       <img
-        src="../images/programs/cncf-icon-white.svg"
-        alt="CNCF"
+        src="{{ '/assets/images/programs/cncf-icon-white.svg' | relative_url }}"
+        alt="Cloud Native Computing Foundation logo"
         class="minicard-img"
       />
 
@@ -81,40 +90,41 @@
   <span class="minicard-span">
     <a
       class="smallcard-a waves-effect waves-light btn white-text darken-2 l5-dark-green z-depth-2"
-      href="/programs/gsod/2020"
+      href="{{ '/programs/gsod/2020' | relative_url }}"
     >
       <img
-        src="../images/programs/gsod.svg"
-        alt="GSOD2020"
+        src="{{ '/assets/images/programs/gsod.svg' | relative_url }}"
+        alt="Google Season of Docs logo"
         class="minicard-img"
       />
-      <span class="inner-span">GSOD 2020</span>
+      <span class="inner-span">GSOD</span>
     </a>
   </span>
   <span class="minicard-span">
     <a
       class="smallcard-a waves-effect waves-light btn white-text darken-2 l5-dark-green z-depth-2"
-      href="/programs/gsoc/2020"
+      href="{{ '/programs/gsoc/2020' | relative_url }}"
     >
       <img
-        src="../images/programs/gsoc.svg"
-        alt="GSOC2019"
+        src="{{ '/assets/images/programs/gsoc.svg' | relative_url }}"
+        alt="Google Summer of Code logo"
         class="minicard-img"
       />
-      <span class="inner-span">GSOC 2020</span>
+      <span class="inner-span">GSOC </span>
     </a>
   </span>
   <span class="minicard-span">
     <a
       class="smallcard-a waves-effect waves-light btn white-text darken-2 l5-dark-green z-depth-2"
-      href="/programs/gsoc/2019"
+      href="{{ '/programs/lfx' | relative_url }}"
     >
       <img
-        src="../images/programs/gsoc.svg"
-        alt="GSOC2020"
+        src="{{ '/assets/images/programs/lfx-icon-white.svg' | relative_url }}"
+        alt="LFX logo"
         class="minicard-img"
+        style="width:23%;padding-top:.4rem;padding-bottom:.4rem;"
       />
-      <span class="inner-span">GSOC 2019 </span></a
+      </a
     >
   </span>
 </div>

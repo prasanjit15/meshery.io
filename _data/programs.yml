@@ -1,37 +1,38 @@
-- name: Google Summer of Docs
-  imagePath: /images/programs/gsod.svg
-  link: /programs/gsod/2020
-  new_window: false
+- name: Meshery MeshMate Program
+  imagePath: /assets/images/logos/meshmate-white.svg
+  link: /community/meshmates
+  new_window: true
 
-
-- name: Google Summer of Code 2019
-  imagePath: /images/programs/gsoc.svg
-  link:  /programs/gsoc/2019
-  new_window: false
-
-
-- name: Google Summer of Code 2020
-  imagePath: /images/programs/gsoc.svg
-  link: /programs/gsoc/2020
+- name: Google Summer of Code
+  imagePath: /assets/images/programs/gsoc.svg
+  imagePathDark: /assets/images/programs/gsoc-icon-color.svg
+  link: /programs/gsoc
   new_window: false
 
 
 - name: Cloud Native Computing Foundation
-  imagePath: /images/programs/cncf-icon-white.svg
-  link:  /programs/meshery/cncf
+  imagePath: /assets/images/programs/cncf-icon-white.svg
+  link: /programs/meshery/cncf
   new_window: false
    
 
-- name: Community Bridge 2020
-  imagePath: /images/programs/CommunityBridge-circular-white.svg
-  link:  /programs/communitybridge/2020
+- name: LFX
+  imagePath: /assets/images/programs/lfx-icon-white.svg
+  imagePathDark: /assets/images/programs/lfx-icon-color.svg
+  link: /programs/lfx
   new_window: false
 
 
-- name: MLH2020
-  imagePath: /images/programs/fellowship_gray.png
-  link:  /programs/mlhfellowship/2020
+- name: MLH
+  imagePath: /assets/images/programs/mlh-icon-white.svg
+  link: /programs/mlh
   new_window: false
+
+- name: Google Season of Docs
+  imagePath: /assets/images/programs/gsod.svg
+  link: /programs/gsod/2021
+  new_window: false
+  archived: true
  
 
        

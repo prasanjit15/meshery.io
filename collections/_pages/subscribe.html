@@ -1,12 +1,18 @@
 ---
 layout: plain
-permalink: /subscribe
+permalink: /subscribe/
+redirect_from:
+  - /subscribe
 ---
-<div>
+<section class="subscribe">
     <div>
-        <div id="contact" style="width:100%;">
-            <h3 style="text-align:center;">Mailing List</h3>
-            {% include subscribe.html %}
+        <div class="mailers">
+            {% if page.title == "FALSE" %}
+                 {% include mailing-lists.html color="color:#eee;"  %}
+            {% endif %}
         </div>
+        <div>
+            {% include mailing-lists.html  %}
+          </div>
     </div>
-</div>
+</section>

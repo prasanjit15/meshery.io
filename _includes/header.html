@@ -4,78 +4,203 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    {% seo %} {% feed_meta %} {% if jekyll.environment == 'production' %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/stellarnav.min.css" />
+    <!-- Google Tag Manager -->
+    {% if page.patternInfo %}
+    <meta name="description" content="{{ page.patternInfo | url_decode }}" />
+    {% endif %}
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KL6SSW5');</script>
+    <!-- End Google Tag Manager -->
+    {% seo %} {% feed_meta %} 
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/stellarnav.css" />
+    <!-- {% if jekyll.environment == 'production' %}
+    
     {% else %}
     <link rel="stylesheet" href="{{ site.baseurl }}/css/stellarnav.css" />
-    {% endif %}
+    {% endif %} -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css" />
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.ico" />
+    <link rel="icon" href="{{ '/favicons/favicon.ico' | relative_url }}" />
+    <link
+      rel="apple-touch-icon"
+      href="{{ '/favicons/apple-touch-icon.png' | relative_url }}"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ '/favicons/favicon-16x16.png' | relative_url }}"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ '/favicons/favicon-32x32.png' | relative_url }}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ '/favicons/android-chrome-192x192.png' | relative_url }}"
+      sizes="192x192"
+    />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Open+Sans"
     />
-
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "{{ site.url }}",
+        "name": "{{ site.title }}",
+        "description": "{{ site.description }}"
+      }
+      </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
     />
     <link rel="stylesheet" href="{{ site.baseurl }}/css/subscribe.css" />
 
-    {% if page.title == 'Programs' or page.title == 'CNCF' or page.title ==
-    'CommunityBridge 2020' or page.title == 'Google Summer of Code 2019' or
-    page.title == 'Google Summer of Code 2020' or page.title == 'GSOD2020' or
-    page.title == 'MLH Fellowship' %}
+	{% assign page_title_lc = page.title | strip | downcase %}
+    {% if page_title_lc == 'programs' or page_title_lc == 'cncf' or (page_title_lc contains 'lfx') or (page_title_lc contains 'google summer of code') or page_title_lc == 'gsod2020' or page_title_lc == 'mlh' %}
     <link rel="stylesheet" href="{{ site.baseurl }}/css/program.css" />
-    {% endif %} {% if jekyll.environment == 'production' and
-    site.google_analytics_key != '' %}
-    <script>
-      window.ga =
-        window.ga ||
-        function () {
-          (ga.q = ga.q || []).push(arguments);
-        };
-      ga.l = +new Date();
-      ga("create", "{{ site.google_analytics_key }}", "auto");
-      ga("send", "pageview");
-    </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
     {% endif %}
-    <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="Meshery" />
+
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@mesheryio" />
-    <meta name="twitter:creator" content="@Lee Calcote" />
+    <meta name="twitter:creator" content="@mesheryio" />
+    <meta name="author" content="Meshery Authors">
+    {% if page.featured-image %}
     <meta
       name="twitter:image"
-      content="https://raw.githubusercontent.com/layer5io/meshery.io/master/images/logos/meshery-logo-light-text.png"
+      content="https://raw.githubusercontent.com/meshery/meshery.io/master/{{ page.featured-image }}"
     />
+    <meta name="image" property="og:image" content="https://raw.githubusercontent.com/meshery/meshery.io/master/{{page.featured-image}}" />
+    <meta property="og:type" content="website">
+    <meta name="og:image" content="https://raw.githubusercontent.com/meshery/meshery.io/master/{{page.featured-image}}" />
+    {% else %}
     <meta
-      name="image"
-      property="og:image"
-      content="https://raw.githubusercontent.com/layer5io/meshery.io/master/images/logos/meshery-logo-light-text.png"
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/meshery/meshery.io/master/assets/images/logos/meshery-gradient.png"
     />
+    <meta name="image" property="og:image" content="https://raw.githubusercontent.com/meshery/meshery.io/master/assets/images/logos/meshery-gradient.png" />
+    <meta property="og:type" content="website">
+    <meta name="og:image" content="https://raw.githubusercontent.com/meshery/meshery.io/master/assets/images/logos/meshery-gradient.png" />
+    {% endif %}
   </head>
+ 
+    <body style="overflow-x: hidden" class="dark-mode">
 
-  <body style="overflow-x: hidden">
-    <header id="mainHeader">
-      <div class="container nav-container">
-        <div class="project-name">
-          <a href="{{ site.baseurl }}/">
-            <img
-              src="{{ site.baseurl }}/images/logos/meshery-logo.png"
-              alt="Meshery Logo"
-              height="45"
-            />&nbsp;
-            <img
-              src="{{ site.baseurl }}/images/logos/meshery-logo-text.png"
-              alt="Meshery Logo"
-              height="20"
-            />
-          </a>
-        </div>
-        {% include navigation.html %}
+      <script>
+        
+        window.siteBaseUrl = "{{ site.baseurl }}";
+
+        const body = document.body;
+
+        const BANNER_KEY = "sitewideBannerDismissed";
+
+        function isBannerDismissed() {
+            try {
+              return localStorage.getItem(BANNER_KEY) === "true";
+            } catch {
+              return false;
+            }
+          }
+
+        if (isBannerDismissed()) {
+            document.documentElement.classList.add("banner-dismissed");
+          }
+    
+        if (localStorage.getItem("mode") === "light-mode") {
+          body.classList.remove("dark-mode");
+    
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
+          allLogos.forEach(e => e.src = e.dataset.logoForLight);
+        }
+
+        // Automatically set logos based on initial theme
+        document.addEventListener('DOMContentLoaded', () => {
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
+          allLogos.forEach(e => {
+            e.src = body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
+          });
+
+          // emit the theme event
+          document.dispatchEvent(new CustomEvent("themeChange",{
+			      detail : {value : localStorage.getItem("mode")},
+			      bubbles: true ,
+		      }))
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+          // $('.sitewide-banner').animate({top: 0});
+          const banner = document.querySelector(".sitewide-banner");
+          if (!banner || isBannerDismissed()) {
+            return;
+          }
+          setTimeout(function() {
+            banner.classList.remove("hidden");
+            
+          }, 0); // Add a delay of 1 second before showing the banner
+
+        const closeBtn = banner.querySelector(".banner-close");
+          if (closeBtn) {
+            closeBtn.addEventListener("click", function () {
+              banner.classList.add("dismissed");
+              try {
+                localStorage.setItem(BANNER_KEY, "true");
+              } catch { }
+            });
+          };
+        });
+
+      </script>
+
+    {% if page.title != "Meshery | The Kubernetes and Cloud Native Manager" and page.title != "Programs" %}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL6SSW5" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!-- Sitewide Banner -->
+<div class="sitewide-banner hidden">
+  <p>Meshery is now a CNCF Incubating project.</p>
+  <p>
+    <a href="https://www.cncf.io/blog/2026/10/07/meshery-becomes-a-cncf-incubating-project/">Read the announcement</a>
+  </p>
+  <button class="banner-close" type="button" aria-label="close announcement button">
+    &times;
+  </button>
+</div>
+<header id="mainHeader" class="filledHeader">
+  {% else %}
+  <header id="mainHeader">
+    {% endif %}
+
+    <div class="container nav-container">
+  
+      <div class="project-name">
+        <a href="{{ site.baseurl }}/" {% if page.layout == "home" %}data-homepage-logo{% endif %}>
+          <img src="{{ site.baseurl }}/assets/images/logos/meshery-logo.png" alt="Meshery Logo" />&nbsp;
+          <img src="{{ site.baseurl }}/assets/images/logos/meshery-logo-text.png"
+            data-logo-for-dark="{{ site.baseurl }}/assets/images/logos/meshery-logo-text.png"
+            data-logo-for-light="{{ site.baseurl }}/assets/images/logos/meshery-logo-text-dark.png" alt="Meshery Logo"
+            id="logo-dark-light" />
+        </a>
       </div>
-    </header>
-  </body>
-</html>
+      {% include navigation.html %}
+      <button class="nav-mode-icon" id="mode-toggle-btn" style="text-align: center; background: transparent;">
+        <img class="nav-text" id="logo-dark-light"
+          src="{{ site.baseurl }}/assets/images/nav-icons/mode-toggle-icon-moon.png"
+          data-logo-for-dark="{{ site.baseurl }}/assets/images/nav-icons/mode-toggle-icon-moon.png"
+          data-logo-for-light="{{ site.baseurl }}/assets/images/nav-icons/mode-toggle-icon-sun.png" alt="theme-logo" />
+      </button>
+    </div>
+  </header>
